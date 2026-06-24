@@ -271,3 +271,42 @@ if(clearAllBtn != null)
         renderRegistrations();
     });
 }
+
+/* Darkmode */
+/* DARK MODE */
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+function applyTheme()
+{
+    let theme = localStorage.getItem("theme");
+
+    if(theme == "dark")
+    {
+        document.body.classList.add("dark-mode");
+        darkModeBtn.innerText = "☀️ Light Mode";
+    }
+    else
+    {
+        document.body.classList.remove("dark-mode");
+        darkModeBtn.innerText = "🌙 Dark Mode";
+    }
+}
+
+if(darkModeBtn != null)
+{
+    applyTheme();
+
+    darkModeBtn.addEventListener("click", function()
+    {
+        if(document.body.classList.contains("dark-mode"))
+        {
+            localStorage.setItem("theme", "light");
+        }
+        else
+        {
+            localStorage.setItem("theme", "dark");
+        }
+
+        applyTheme();
+    });
+}
