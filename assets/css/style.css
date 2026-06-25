@@ -29,7 +29,9 @@ body.dark-mode {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     padding-top: 70px;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -42,6 +44,15 @@ body {
     object-fit: contain;
 }
 
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
 /* HERO */
 .hero-section {
     background: linear-gradient(135deg, #dc3545, #212529);
@@ -50,7 +61,7 @@ body {
 }
 
 .hero-title {
-    font-size: 52px;
+    font-weight: 700;
     font-weight: bold;
 }
 
@@ -105,9 +116,15 @@ body {
     z-index: 3;
 }
 
+p {
+    font-weight: 400;
+    line-height: 1.7;
+}
+
 /* SECTION */
 .section-title,
 main h1 {
+    font-weight: 700;
     font-weight: bold;
     color: var(--primary-color);
 }
